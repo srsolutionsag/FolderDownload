@@ -1,0 +1,20 @@
+<!-- language file start -->
+preparing_download#:#Der Download wird vorbereitet...
+cancel#:#Abbrechen
+preparing_download_long#:#Der Download von %d Dateien (%s) wird vorbereitet. Dies kann unter Umständen mehrere Minuten dauern...
+download_starts#:#Der Download beginnt...
+plugin_configuration#:#Konfiguration des Ordner-Download-Plugins
+file_count_threshold#:#Schwellenwert Dateianzahl
+file_count_threshold_info#:#Legt den Schwellenwert für die Anzahl an Dateien pro Download fest (Default: %d).<br/>Wird dieser Wert in einem Download überschritten, dann werden dem Benutzer zusätzliche Informationen über den Fortschritt angezeigt.<br/>Wird 0 angegeben, werden die zusätzlichen Informationen immer angezeigt.
+total_size_threshold#:#Schwellenwert Downloadgrösse (MB)
+total_size_threshold_info#:#Legt den Schwellenwert für die summierte Grösse (MB) aller Dateien im Download fest (Default: %d).<br/>Wird dieser Wert in einem Download überschritten, dann werden dem Benutzer zusätzliche Informationen über den Fortschritt angezeigt.<br/>Wird 0 angegeben, werden die zusätzlichen Informationen immer angezeigt.
+remove_successful_entries#:#Abgeschlossene Einträge entfernen
+remove_successful_entries_info#:#Falls aktiviert, werden nur fehlerhafte Downloads in der Datenbank belassen. Falls deaktiviert, werden alle Downloads in der Datenbank belassen.
+php_binary#:#PHP-Befehlszeile
+php_binary_info#:#Wird benötigt um den Kopier- und Zip-Prozess im Hintergrund laufen zu lassen (z.B. /usr/bin/php5).
+php_binary_info_win#:#Wird benötigt um den Kopier- und Zip-Prozess im Hintergrund laufen zu lassen (z.B. c:/program files/php5/php.exe).
+info_no_php_binary#:#Es wurde keine PHP-Befehlszeile angegeben. Dadurch wird es nicht möglich sein, den Download während dem Kopier- und Zip-Prozess abzubrechen.
+php_binary_not_found#:#Die angegebene PHP-Befehlszeile wurde nicht gefunden.
+download_size_limit#:#Download-Limite (MB)
+download_size_limit_info#:#Legt die Limite für die summierte Grösse (MB) aller Dateien im Download fest (Default: %d).<br/>Wird dieser Wert in einem Download überschritten, dann ist kein Download möglich.<br/>Wird 0 angegeben, ist keine Limite vorhanden.
+error_download_too_large#:#Der Download überschreitet die maximal zulässige Grösse von %s und ist daher nicht möglich. Bitte laden Sie die Dateien einzeln herunter.

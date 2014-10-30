@@ -1,0 +1,20 @@
+<!-- language file start -->
+preparing_download#:#Preparing your download...
+cancel#:#Cancel
+preparing_download_long#:#Preparing the download of %d files (%s). This may take several minutes...
+download_starts#:#Download is starting...
+plugin_configuration#:#Folder-Download-Plugin configuration
+file_count_threshold#:#Threshold number of files
+file_count_threshold_info#:#Defines the threshold of number of files per download (Default: %d).<br/>If this value is reached additional information about the progress is displayed.<br/>If 0 is specified the additional information is always displayed.
+total_size_threshold#:#Threshold download size (MB)
+total_size_threshold_info#:#Defines the threshold for the accumulated size (MB) of all files within the download (Default: %d).<br/>If this value is reached additional information about the progress is displayed.<br/>If 0 is specified the additional information is always displayed.
+remove_successful_entries#:#Remove completed entries
+remove_successful_entries_info#:#If activated only failed downloads are kept in the database. If deactivated all downloads are kept in the database.
+php_binary#:#PHP path
+php_binary_info#:#Needed to run the copy and zip-process in background (e.g. /usr/bin/php5).
+php_binary_info_win#:#Needed to run the copy and zip-process in background (e.g. c:/program files/php5/php.exe).
+info_no_php_binary#:#No PHP path was specified. Therefore it's not possible to cancel a download during  its preparation.
+php_binary_not_found#:#The specified PHP path was not found.
+download_size_limit#:#Download limit (MB)
+download_size_limit_info#:#Defines the limit for the accumulated size of all files within the download (Default: %d).<br/>If this value is exceeded no download is possible.<br/>If 0 is specified then there is not limit.
+error_download_too_large#:#The download exceeds the maximum allowed size of %s. Please download the files separately.
