@@ -1,4 +1,4 @@
-# ILIAS-FolderDownload
+# ILIAS-FolderDownload Plugin
 
 Shows a wait dialog if a folder is downloaded and informs the user that his download is getting prepared.
 
