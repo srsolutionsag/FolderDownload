@@ -1,26 +1,20 @@
 # ILIAS-FolderDownload
 
-Shows a wait dialog if a folder is downloaded and informs the user
-that his download is getting prepared.
+Shows a wait dialog if a folder is downloaded and informs the user that his download is getting prepared.
 
-Features:
+### Features:
 - The user gets informed that something is happening.
-- The user may cancel the download preparations anytime.
-  This also ends the background process on the server side and the server
-  resources are released immediately.
+- The user may cancel the download preparations anytime. This also ends the background process on the server side and the server resources are released immediately.
 - A download limit can be set to disallow downloads of too big folders.
-- The downloads are tracked in the database ('ui_uihk_folddl_data').
-  But there's no GUI for that at the moment, so check it in the database directly.
+- The downloads are tracked in the database ('ui_uihk_folddl_data'). But there's no GUI for that at the moment, so check it in the database directly.
 - PHP background processes work on Linux and Windows.
 
 
 ### Installation
-------------
 Put the contents of this folder into
 `./Customizing/global/plugins/Services/UIComponent/UserInterfaceHook/FolderDownload`
 
-Enable the plugin in the plugin administration and specified the path to PHP (if not detected) 
-that background operations are supported.
+Enable the plugin in the plugin administration and specified the path to PHP (if not detected) that background operations are supported.
 
 Enable the download of folders in the "Files and Folders" admin page!
 
@@ -39,5 +33,5 @@ Enable the download of folders in the "Files and Folders" admin page!
 Does not work with ILIAS >= `4.4.x`
 
 
-### IMPORTANT
+### Important
 Do not delete the dummy folder in the /js directory that matches the plugin version (eg. /js/1-1-0).
