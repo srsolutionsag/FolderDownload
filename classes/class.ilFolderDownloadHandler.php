@@ -110,7 +110,8 @@ class ilFolderDownloadHandler
 		$result = new stdClass();
 		$result->validated = false;
 		$result->downloadId = null;
-		
+		$result->refIds = $_POST["refId"];
+
 		// create the download object
 		$dl = new ilFolderDownload();
 		$dl->setRefIds($_POST["refId"]);
@@ -120,6 +121,8 @@ class ilFolderDownloadHandler
 		if ($dl->validate())
 		{
 			// save download object if download seems possible
+
+
 			$dl->save();
 			
 			$result->validated = true;

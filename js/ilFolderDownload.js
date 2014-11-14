@@ -10,8 +10,25 @@
     // TODO: change to false!!!
     var DEBUG_ENABLED = false;
 
-    // logging also in IE
-    if (Function.prototype.bind && console && typeof console.log == "object") { ["log", "info", "warn", "error", "assert", "dir", "clear", "profile", "profileEnd"].forEach(function (e) { console[e] = this.call(console[e], console) }, Function.prototype.bind) } var konsole = { log: function (e) { }, dir: function (e) { } }; if (typeof window.console != "undefined" && typeof window.console.log == "function") { konsole = window.console; if (DEBUG_ENABLED) konsole.log("konsole initialized") } function log() { if (DEBUG_ENABLED) konsole.log.apply(konsole, arguments) }
+	// logging also in IE
+	if (Function.prototype.bind && console && typeof console.log == "object") {
+		["log", "info", "warn", "error", "assert", "dir", "clear", "profile", "profileEnd"].forEach(function (e) {
+			console[e] = this.call(console[e], console)
+		}, Function.prototype.bind)
+	}
+	var konsole = {
+		log: function (e) {
+		}, dir: function (e) {
+		}
+	};
+	if (typeof window.console != "undefined" && typeof window.console.log == "function") {
+		konsole = window.console;
+		if (DEBUG_ENABLED) konsole.log("konsole initialized")
+	}
+	function log() {
+		if (DEBUG_ENABLED) konsole.log.apply(konsole, arguments)
+	}
+	// end log
 
     var ilDownloadArguments = function ()
     {
@@ -131,6 +148,7 @@
             executeCommand("validate", { refId: args.refIds }, function (result)
             {
                 // if the validation failed, just run the original download url
+	            console.log(result);
                 if (result.validated)
                 {
                     args.downloadId = result.downloadId;
@@ -291,6 +309,7 @@
         {
             log("DownloadHandler.executeCommand('%s')", cmd);
             startTimer(cmd);
+
             currentAjaxCall = $.ajax(
             {
                 url: handlerUrl + "&cmd=" + cmd,
@@ -376,7 +395,10 @@
             // get default link and ref id
             var overlayId = $link.attr("id").replace(/_$/, '');
             var href = $link.attr("href");
-            var refId = overlayId.substr(overlayId.lastIndexOf("_") + 1);
+	        var splitted = overlayId.match(/act_([0-9]*)/im);
+
+            //var refId = overlayId.substr(overlayId.lastIndexOf("_") + 1);
+	        var refId = splitted[1];
 
             $tr = $link.closest("tr");
 

@@ -54,8 +54,10 @@ class ilFolderDownload
 	 */
 	public function validate()
 	{
-		global $ilias, $ilAccess, $tree;
-		
+		global $ilias, $ilAccess, $ilLog;
+		/**
+		 * @var $ilAccess ilAccessHandler
+		 */
 		$ref_ids = $this->getRefIds();
 		
 		// for all objects that should be downloaded
@@ -63,23 +65,25 @@ class ilFolderDownload
 		{
 			foreach ($ref_ids as $ref_id)
 			{
-				$obj_type = ilObject::_lookupType($ref_id, true);
-				
+				$obj_type = ilObject2::_lookupType($ref_id, true);
+
 				// supported type?
 				if (!in_array($obj_type, array("fold", "file")))
 				{
 					return false;
 				}
-				
+
 				// has read access?
 				if (!$ilAccess->checkAccess("read", "", $ref_id, $obj_type))
 				{
+					return 20;
 					return false;
 				}
-				
+
 				// in trash?
 				if (ilObject::_isInTrash($ref_id))
 				{
+					return 30;
 					return false;
 				}
 			}
@@ -88,6 +92,7 @@ class ilFolderDownload
 		}
 		else
 		{
+			return  40;
 			return false;
 		}
 	}
