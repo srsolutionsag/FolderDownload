@@ -20,6 +20,8 @@ Enable the download of folders in the "Files and Folders" admin page!
 
 
 ### History
+- 1.2.0	
+  - Fixed Support for ILIAS 4.4
 - 1.1.0	
   - Support for asynchronously loaded menus added (Administration > General Settings > Load Resource Action Lists Asynchronously)
   - Support for multi download feature of ILIAS 4.4 added
