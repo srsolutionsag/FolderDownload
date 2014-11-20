@@ -397,8 +397,10 @@
             var href = $link.attr("href");
 	        var splitted = overlayId.match(/act_([0-9]*)/im);
 
+
             //var refId = overlayId.substr(overlayId.lastIndexOf("_") + 1);
 	        var refId = splitted[1];
+
 
             $tr = $link.closest("tr");
 

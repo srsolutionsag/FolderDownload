@@ -1,0 +1,11 @@
+DO NOT DELETE THIS FOLDER!
+
+It's used as dummy folder for specifying a version to the script that new versions are
+loaded immediately from the browser instead taking the version from the cache.
+The version appended by ILIAS doesn't work in that case, it should be the one of the plugin.
+
+JavaScript file link looks like:
+./[dir_to_plugins]/FolderDownload/js/1-1-0/../ilFolderDownload.js
+
+PHP's is_file() on windows works as expected even if the folder does not exist but unfortunatelly 
+Linux needs that the "dummy version" folder exists else is_file() returns false.
